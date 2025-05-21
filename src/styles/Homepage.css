@@ -1,0 +1,121 @@
+/* src/styles/Homepage.css */
+
+/* Header styles */
+.header {
+    background-color: #0000007c; /* */
+    backdrop-filter: saturate(180%) blur(10px); /* */
+    display: flex; /* */
+    justify-content: space-between; /* */
+    padding: 15px 30px 10px; /* */
+    position: fixed; /* */
+    width: 100%; /* */
+    top: 0; /* */
+    z-index: 10; /* */
+    box-sizing: border-box;
+}
+
+.header h1 {
+    color: #1DCD9F; /* */
+    font-size: 30px; /* */
+    font-weight: bold; /* */
+    margin: 0; /* */
+    display: inline; /* */
+    font-family: "Playwrite DK Loopet", cursive !important; /* */
+}
+
+.nav {
+    display: flex; /* */
+    justify-content: right; /* */
+    align-items: center; /* */
+    gap: 25px; /* */
+}
+
+.nav a {
+    color: white; /* */
+    margin-left: 20px; /* */
+}
+
+.nav a:hover {
+    color: #1DCD9F; /* */
+}
+
+/* Headline styles */
+.headline {
+    position: relative; /* */
+    height: 400px; /* */
+    background-color: #222222; /* */
+    display: flex; /* */
+    justify-content: center; /* */
+    align-items: center; /* */
+    text-align: center; /* */
+    margin: 0px 20px; /* Adjusted from original for potential global margin/padding */
+    border-radius: 15px; /* */
+    /* Path assuming assets folder is in public */
+    background-image: url(/assets/headlineBG2.png); /* */
+    margin-top: 80px; /* */ /* This provides space for the fixed header */
+    background-position: center; /* */
+    background-size: cover; /* */
+}
+
+.headlineContent {
+    position: relative; /* */
+    z-index: 1; /* */
+}
+
+.headline h2 {
+    font-size: 36px; /* */
+    margin-bottom: 10px; /* */
+}
+
+.headline p {
+    font-size: 18px; /* */
+}
+
+/* Movie Section styles */
+.movieSection {
+    padding: 40px; /* */
+}
+
+.movieSection h2 {
+    color: #1DCD9F; /* */
+    margin-bottom: 20px; /* */
+}
+
+.movie-grid {
+    display: grid; /* */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* */
+    gap: 70px; /* */
+    overflow-x: auto; /* Changed to auto to allow scrolling if content overflows, use scroll if preferred */ /* */
+    padding-bottom: 20px; /* Added padding for better scroll visibility if needed */
+}
+
+/* Scrollbar hiding for movie-grid */
+.movie-grid {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */ /* */
+    scrollbar-width: none;  /* Firefox */ /* */
+}
+.movie-grid::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */ /* */
+}
+
+.movie-card {
+    width: 240px; /* */
+    background-color: #222222b7; /* */
+    border-radius: 8px; /* */
+    overflow: hidden; /* Changed from scroll to hidden to match visual, assuming card content fits */ /* */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* */
+}
+
+.movie-card img {
+    width: 100%; /* */
+    height: 360px; /* Adjusted from 80% to a fixed height for consistency, or use aspect-ratio */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 5px 5px 0 0; /* Rounded corners only at the top */ /* */
+    margin-bottom: 10px; /* */
+}
+
+.movie-card h3 {
+    font-size: 17px; /* */
+    margin: 15px 13px; /* */
+    color: white; /* Ensure text is visible */
+}

@@ -1,0 +1,29 @@
+/* src/styles/Global.css */
+@font-face {
+    font-family: 'Playwrite DK Loopet';
+    /* Ensure this path is correct if you place fonts elsewhere, e.g., src/assets/fonts */
+    src: url('/assets/fonts/Playwrite_DK_Loopet/PlaywriteDKLoopet-VariableFont_wght.ttf') format('truetype'); /* */
+}
+
+body {
+    background-color: #000000; /* */
+    color: white; /* */
+    margin: 0; /* */
+    font-family: "Poppins", sans-serif; /* */
+}
+
+a {
+    text-decoration: none; /* */
+}
+
+/* Hide scrollbars globally if desired, or scope to specific components */
+/* For movie-grid, it's handled in Homepage.css */
+/*
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+*/
