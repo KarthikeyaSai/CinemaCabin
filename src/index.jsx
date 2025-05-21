@@ -2,7 +2,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './styles/Global.css'; // Import global styles
+import './styles/Homepage.css';
+import './styles/Global.css'; 
 // If you installed Bootstrap via npm:
 import 'bootstrap/dist/css/bootstrap.min.css'; //
 

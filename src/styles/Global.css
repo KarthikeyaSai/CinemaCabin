@@ -4,16 +4,17 @@
     /* Ensure this path is correct if you place fonts elsewhere, e.g., src/assets/fonts */
     src: url('/assets/fonts/Playwrite_DK_Loopet/PlaywriteDKLoopet-VariableFont_wght.ttf') format('truetype'); /* */
 }
-
-body {
-    background-color: #000000; /* */
-    color: white; /* */
-    margin: 0; /* */
-    font-family: "Poppins", sans-serif; /* */
+.backGround {
+    background-color: #000000;
+    margin: 0;
+    padding-top: 0;
+    font-family: "Poppins", sans-serif;
 }
-
+html {
+    background-color: black;
+}
 a {
-    text-decoration: none; /* */
+    text-decoration: none;
 }
 
 /* Hide scrollbars globally if desired, or scope to specific components */

@@ -11,5 +11,4 @@ const Headline = () => {
         </div>
     );
 };
-
 export default Headline;

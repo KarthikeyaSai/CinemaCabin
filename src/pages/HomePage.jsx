@@ -7,13 +7,13 @@ import '../styles/Homepage.css'; // Import page-specific styles
 
 const HomePage = () => {
     return (
-        <div>
+        <div class = "backGround">
             <Header />
             <main>
                 <Headline />
                 <MovieGrid title="Top Rated Movies" /> {/* */}
-                {/* You can add more MovieGrid components for other sections like "New Releases" */}
-                {/* <MovieGrid title="New Releases" /> */}
+                <MovieGrid title="Popular now" /> {/* */}
+                <MovieGrid title="Your friends ratings" /> {/* */}
             </main>
             {/* Footer can be added here */}
         </div>

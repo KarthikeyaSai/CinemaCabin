@@ -11,8 +11,7 @@ const Header = () => {
             <nav className="nav"> {/* */}
                 {/* Use Link component: <Link to="/">Home</Link> */}
                 <a href="/">Home</a> {/* */}
-                <a href="/popular">Popular</a> {/* */}
-                <a href="/new-releases">New Releases</a> {/* */}
+                <a href="/Recommendation">Popular</a> {/* */}
             </nav>
         </header>
     );

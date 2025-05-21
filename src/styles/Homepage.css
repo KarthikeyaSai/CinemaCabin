@@ -1,5 +1,4 @@
 /* src/styles/Homepage.css */
-
 /* Header styles */
 .header {
     background-color: #0000007c; /* */
@@ -12,6 +11,10 @@
     top: 0; /* */
     z-index: 10; /* */
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* */
 }
 
 .header h1 {
@@ -44,6 +47,7 @@
     position: relative; /* */
     height: 400px; /* */
     background-color: #222222; /* */
+    color: white;
     display: flex; /* */
     justify-content: center; /* */
     align-items: center; /* */
@@ -51,13 +55,14 @@
     margin: 0px 20px; /* Adjusted from original for potential global margin/padding */
     border-radius: 15px; /* */
     /* Path assuming assets folder is in public */
-    background-image: url(/assets/headlineBG2.png); /* */
+    background-image: url(../assets/headlineBG2.png); /* */
     margin-top: 80px; /* */ /* This provides space for the fixed header */
     background-position: center; /* */
     background-size: cover; /* */
 }
 
 .headlineContent {
+    
     position: relative; /* */
     z-index: 1; /* */
 }

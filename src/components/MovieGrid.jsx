@@ -1,17 +1,16 @@
-// src/components/MovieGrid.js
 import React from 'react';
 import MovieCard from './MovieCard';
 
 // Sample movie data - in a real app, this would come from props or state
 const movies = [
-    { id: 1, imageSrc: '/assets/Posters/shawshankRed.webp', altText: 'Shawshank Redemption', title: 'Shawshank Redemption' }, //
-    { id: 2, imageSrc: '/assets/Posters/darkknight.jpg', altText: 'The Dark Knight', title: 'The Dark Knight' }, //
-    { id: 3, imageSrc: '/assets/Posters/EEAO.jpg', altText: 'Everything Everywhere All at Once', title: 'Everything Everywhere All at Once' }, //
-    { id: 4, imageSrc: '/assets/Posters/inception.jpg', altText: 'Inception', title: 'Inception' }, //
-    { id: 5, imageSrc: '/assets/Posters/parasite.jpg', altText: 'Parasite', title: 'Parasite' }, //
+    { id: 1, imageSrc: '../assets/Posters/shawshankRed.webp', altText: 'Shawshank Redemption', title: 'Shawshank Redemption' }, //
+    { id: 2, imageSrc: '../assets/Posters/darkknight.jpg', altText: 'The Dark Knight', title: 'The Dark Knight' }, //
+    { id: 3, imageSrc: '../assets/Posters/EEAO.jpg', altText: 'Everything Everywhere All at Once', title: 'Everything Everywhere All at Once' }, //
+    { id: 4, imageSrc: '../assets/Posters/inception.jpg', altText: 'Inception', title: 'Inception' }, //
+    { id: 5, imageSrc: '../assets/Posters/parasite.jpg', altText: 'Parasite', title: 'Parasite' }, //
     // Add more movies as needed for scrolling demonstration
-    { id: 6, imageSrc: '/assets/Posters/darkknight.jpg', altText: 'The Dark Knight 2', title: 'The Dark Knight Returns' },
-    { id: 7, imageSrc: '/assets/Posters/inception.jpg', altText: 'Inception 2', title: 'Inception: The Dream Continues' },
+    { id: 6, imageSrc: '../assets/Posters/darkknight.jpg', altText: 'The Dark Knight 2', title: 'The Dark Knight Returns' },
+    { id: 7, imageSrc: '../assets/Posters/inception.jpg', altText: 'Inception 2', title: 'Inception: The Dream Continues' },
 ];
 
 const MovieGrid = ({ title }) => {
