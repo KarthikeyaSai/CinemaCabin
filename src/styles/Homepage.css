@@ -1,126 +1,337 @@
 /* src/styles/Homepage.css */
 /* Header styles */
 .header {
-    background-color: #0000007c; /* */
-    backdrop-filter: saturate(180%) blur(10px); /* */
-    display: flex; /* */
-    justify-content: space-between; /* */
-    padding: 15px 30px 10px; /* */
-    position: fixed; /* */
-    width: 100%; /* */
-    top: 0; /* */
-    z-index: 10; /* */
+    background-color: #0000007c;
+    backdrop-filter: saturate(180%) blur(10px);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
     box-sizing: border-box;
 }
 
 a {
-    text-decoration: none; /* */
+    text-decoration: none !important;
 }
 
 .header h1 {
-    color: #1DCD9F; /* */
-    font-size: 30px; /* */
-    font-weight: bold; /* */
-    margin: 0; /* */
-    display: inline; /* */
-    font-family: "Playwrite DK Loopet", cursive !important; /* */
+    color: #1DCD9F;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    display: inline;
+    font-family: "Playwrite DK Loopet", cursive !important;
+}
+
+.header h1 a {
+    color: #1DCD9F;
+    text-decoration: none !important;
+}
+
+.header h1 a:hover {
+    color: #1DCD9F;
+    text-decoration: none !important;
 }
 
 .nav {
-    display: flex; /* */
-    justify-content: right; /* */
-    align-items: center; /* */
-    gap: 25px; /* */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 25px;
 }
 
 .nav a {
-    color: white; /* */
-    margin-left: 20px; /* */
+    color: white;
+    margin-left: 20px;
+    text-decoration: none !important;
 }
 
 .nav a:hover {
-    color: #1DCD9F; /* */
+    color: #1DCD9F;
+    text-decoration: none !important;
+}
+
+.nav a:visited {
+    text-decoration: none !important;
+}
+
+.nav a:active {
+    text-decoration: none !important;
 }
 
 /* Headline styles */
 .headline {
-    position: relative; /* */
-    height: 400px; /* */
-    background-color: #222222; /* */
+    position: relative;
+    height: 400px;
+    background-color: #222222;
     color: white;
-    display: flex; /* */
-    justify-content: center; /* */
-    align-items: center; /* */
-    text-align: center; /* */
-    margin: 0px 20px; /* Adjusted from original for potential global margin/padding */
-    border-radius: 15px; /* */
-    /* Path assuming assets folder is in public */
-    background-image: url(../assets/headlineBG2.png); /* */
-    margin-top: 80px; /* */ /* This provides space for the fixed header */
-    background-position: center; /* */
-    background-size: cover; /* */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 20px;
+    border-radius: 15px;
+    background-image: url(../assets/headlineBG2.png);
+    margin-top: 80px;
+    background-position: center;
+    background-size: cover;
 }
 
 .headlineContent {
-    
-    position: relative; /* */
-    z-index: 1; /* */
+    position: relative;
+    z-index: 1;
 }
 
 .headline h2 {
-    font-size: 36px; /* */
-    margin-bottom: 10px; /* */
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .headline p {
-    font-size: 18px; /* */
+    font-size: 18px;
 }
 
 /* Movie Section styles */
 .movieSection {
-    padding: 40px; /* */
+    padding: 40px;
 }
 
 .movieSection h2 {
-    color: #1DCD9F; /* */
-    margin-bottom: 20px; /* */
+    color: #1DCD9F;
+    margin-bottom: 20px;
 }
 
 .movie-grid {
-    display: grid; /* */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* */
-    gap: 70px; /* */
-    overflow-x: auto; /* Changed to auto to allow scrolling if content overflows, use scroll if preferred */ /* */
-    padding-bottom: 20px; /* Added padding for better scroll visibility if needed */
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
 }
 
-/* Scrollbar hiding for movie-grid */
+/* Scrollbar styling for movie-grid */
 .movie-grid {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */ /* */
-    scrollbar-width: none;  /* Firefox */ /* */
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: #1DCD9F #333;
 }
+
 .movie-grid::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */ /* */
+    height: 8px;
 }
 
+.movie-grid::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 4px;
+}
+
+.movie-grid::-webkit-scrollbar-thumb {
+    background: #1DCD9F;
+    border-radius: 4px;
+}
+
+.movie-grid::-webkit-scrollbar-thumb:hover {
+    background: #169976;
+}
+
+/* Updated Movie Card Styles */
 .movie-card {
-    width: 240px; /* */
-    background-color: #222222b7; /* */
-    border-radius: 8px; /* */
-    overflow: hidden; /* Changed from scroll to hidden to match visual, assuming card content fits */ /* */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 200px;
 }
 
-.movie-card img {
-    width: 100%; /* */
-    height: 360px; /* Adjusted from 80% to a fixed height for consistency, or use aspect-ratio */
-    object-fit: cover; /* Ensures image covers the area without distortion */
-    border-radius: 5px 5px 0 0; /* Rounded corners only at the top */ /* */
-    margin-bottom: 10px; /* */
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
-.movie-card h3 {
-    font-size: 17px; /* */
-    margin: 15px 13px; /* */
-    color: white; /* Ensure text is visible */
+.movie-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.movie-card-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.movie-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-card-image {
+    transform: scale(1.05);
+}
+
+.movie-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        transparent 100%
+    );
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-card-overlay {
+    opacity: 1;
+}
+
+.movie-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.movie-card-year {
+    color: #e5e5e5;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+.movie-card-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.stars-container {
+    display: flex;
+    gap: 1px;
+}
+
+.star-filled {
+    color: #ffd700;
+}
+
+.star-half {
+    color: #ffd700;
+    opacity: 0.6;
+}
+
+.star-empty {
+    color: #666;
+}
+
+.rating-number {
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+}
+
+.like-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.like-button:hover {
+    background-color: rgba(29, 205, 159, 0.8);
+    transform: scale(1.1);
+}
+
+.like-button.liked {
+    background-color: rgba(255, 71, 87, 0.8);
+}
+
+.heart-icon {
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .movie-grid {
+        gap: 20px;
+    }
+    
+    .movie-card {
+        width: 160px;
+    }
+    
+    .movie-card-container {
+        height: 240px;
+    }
+    
+    .movie-card-title {
+        font-size: 16px;
+    }
+    
+    .movie-card-year {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid {
+        gap: 15px;
+    }
+    
+    .movie-card {
+        width: 140px;
+    }
+    
+    .movie-card-container {
+        height: 200px;
+    }
+    
+    .movieSection {
+        padding: 20px;
+    }
 }
