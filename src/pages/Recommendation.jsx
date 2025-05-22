@@ -1,8 +1,9 @@
-// src/pages/MoviePreferencesPage.jsx
+// src/pages/Recommendation.jsx
 import React, { useState } from 'react';
-import '../styles/Recommendation.css'; // Import page-specific styles
+import '../styles/Recommendation.css'; 
+import '../styles/UserAuth.css'
 
-const MoviePreferencesPage = ({ onContinue }) => {
+const Recommendation = ({ onContinue }) => {
     const [movies, setMovies] = useState(['', '', '']);
 
     const handleMovieChange = (index, value) => {
@@ -30,10 +31,11 @@ const MoviePreferencesPage = ({ onContinue }) => {
 
     return (
         <div className="movie-preferences-page">
-            <div className="preferences-container">
+            <div className="authCard">
                 <div className="intro-text">
-                    <p>To teach Gnod what you are like, please type</p>
-                    <p>in 3 movies that you already know and like.</p>
+                    <p>Welcome To</p>
+                    <h2>Movie Wizard</h2>
+                    <p>Tell him 3 movies that you already know and like.</p>
                 </div>
 
                 <div className="movie-inputs">
@@ -62,4 +64,4 @@ const MoviePreferencesPage = ({ onContinue }) => {
     );
 };
 
-export default MoviePreferencesPage;
+export default Recommendation;

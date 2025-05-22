@@ -1,7 +1,8 @@
 /* src/pages/MoviePreferences.css */
 .movie-preferences-page {
     min-height: 100vh;
-    background-color: #000000;
+    background: url('/assets/movieWizard.png'); /* */ /* Path assuming assets folder is in public */
+    background-size: cover; /* */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +18,7 @@
 
 .intro-text {
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .intro-text p {
@@ -25,7 +27,12 @@
     margin: 5px 0;
     line-height: 1.4;
 }
+.intro-text h2 {
+    font-family: "Playwrite DK Loopet", cursive; /* */
+    margin: 10px;
+    font-size: 50px;
 
+}
 .movie-inputs {
     margin-bottom: 80px;
 }

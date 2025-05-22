@@ -10,6 +10,9 @@
     padding-top: 0;
     font-family: "Poppins", sans-serif;
 }
+.backGround h2 {
+    font-family: Poppins, sans-serif;
+}
 html {
     background-color: black;
 }
