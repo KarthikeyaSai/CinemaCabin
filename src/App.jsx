@@ -1,20 +1,62 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import UserAuthPage from './pages/UserAuthPage';
-// You might want a Navbar component that's separate from the HomePage's Header
-// if you want it on all pages, or adapt the existing Header.
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<UserAuthPage />} />
-        {/* Define other routes here, e.g., for popular, new releases */}
-        {/* <Route path="/popular" element={<PopularPage />} /> */}
-        {/* <Route path="/new-releases" element={<NewReleasesPage />} /> */}
+        {/* Redirect root to login if not authenticated, otherwise to home */}
+        <Route 
+          path="/" 
+          element={
+            isAuthenticated ? <Navigate to="/home" replace /> : <Navigate to="/login" replace />
+          } 
+        />
+        
+        {/* Login route - redirect to home if already authenticated */}
+        <Route 
+          path="/login" 
+          element={
+            isAuthenticated ? (
+              <Navigate to="/home" replace />
+            ) : (
+              <UserAuthPage onLogin={handleLogin} />
+            )
+          } 
+        />
+        
+        {/* Home route - redirect to login if not authenticated */}
+        <Route 
+          path="/home" 
+          element={
+            isAuthenticated ? (
+              <HomePage onLogout={handleLogout} />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          } 
+        />
+        
+        {/* Catch all other routes and redirect based on auth status */}
+        <Route 
+          path="*" 
+          element={
+            <Navigate to={isAuthenticated ? "/home" : "/login"} replace />
+          } 
+        />
       </Routes>
     </Router>
   );

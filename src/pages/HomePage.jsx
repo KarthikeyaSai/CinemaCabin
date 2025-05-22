@@ -5,15 +5,15 @@ import Headline from '../components/Headline';
 import MovieGrid from '../components/MovieGrid';
 import '../styles/Homepage.css'; // Import page-specific styles
 
-const HomePage = () => {
+const HomePage = ({ onLogout }) => {
     return (
-        <div class = "backGround">
-            <Header />
+        <div className="backGround">
+            <Header onLogout={onLogout} />
             <main>
                 <Headline />
-                <MovieGrid title="Top Rated Movies" /> {/* */}
-                <MovieGrid title="Popular now" /> {/* */}
-                <MovieGrid title="Your friends ratings" /> {/* */}
+                <MovieGrid title="Top Rated Movies" />
+                <MovieGrid title="Popular now" />
+                <MovieGrid title="Your friends ratings" />
             </main>
             {/* Footer can be added here */}
         </div>

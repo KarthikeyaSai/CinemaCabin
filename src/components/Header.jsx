@@ -1,17 +1,35 @@
 // src/components/Header.js
 import React from 'react';
-// Link component from react-router-dom if you are using it for navigation
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ onLogout }) => {
+    const handleLogout = () => {
+        if (onLogout) {
+            onLogout();
+        }
+    };
+
     return (
-        <header className="header"> {/* */}
-            {/* Use Link component for client-side routing: <Link to="/"> */}
-            <a href="/"><h1>Cinema Cabin</h1></a> {/* */}
-            <nav className="nav"> {/* */}
-                {/* Use Link component: <Link to="/">Home</Link> */}
-                <a href="/">Home</a> {/* */}
-                <a href="/Recommendation">Popular</a> {/* */}
+        <header className="header">
+            <Link to="/home"><h1>Cinema Cabin</h1></Link>
+            <nav className="nav">
+                <Link to="/home">Home</Link>
+                <Link to="/recommendation">Popular</Link>
+                {onLogout && (
+                    <button 
+                        onClick={handleLogout}
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            color: 'inherit',
+                            cursor: 'pointer',
+                            textDecoration: 'underline',
+                            fontSize: 'inherit'
+                        }}
+                    >
+                        Logout
+                    </button>
+                )}
             </nav>
         </header>
     );
