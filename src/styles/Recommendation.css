@@ -34,7 +34,7 @@
 
 }
 .movie-inputs {
-    margin-bottom: 80px;
+    margin-bottom: 0px;
 }
 
 .movie-input-group {
@@ -45,7 +45,7 @@
     display: block;
     color: #ffffff;
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     text-align: left;
 }
 
@@ -65,6 +65,12 @@
     box-shadow: 0 0 0 3px rgba(29, 205, 159, 0.1);
 }
 
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
 .continue-button {
     background-color: transparent;
     border: 2px solid #169976;

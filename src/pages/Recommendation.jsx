@@ -39,7 +39,8 @@ const Recommendation = ({ onContinue }) => {
                 </div>
 
                 <div className="movie-inputs">
-                    {movies.map((movie, index) => (
+                    <div className='input-flex'>
+                        {movies.map((movie, index) => (
                         <div key={index} className="movie-input-group">
                             <label>One of my favorite movies is...</label>
                             <input
@@ -51,14 +52,19 @@ const Recommendation = ({ onContinue }) => {
                             />
                         </div>
                     ))}
-                </div>
 
-                <button 
+                    
+                    </div>
+                    
+                </div>
+                <div className='button-container'>
+                    <button 
                     className="continue-button"
                     onClick={handleContinue}
                 >
                     continue
                 </button>
+                </div>
             </div>
         </div>
     );
