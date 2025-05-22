@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import HomePage from './pages/HomePage';
 import UserAuthPage from './pages/UserAuthPage';
 import Recommendation from './pages/Recommendation';
+import MoviePage from './pages/MoviePage';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -15,6 +16,7 @@ function App() {
   const handleLogout = () => {
     setIsAuthenticated(false);
   };
+
   const handlePreferencesContinue = (movies) => {
     console.log('User preferences saved:', movies);
     // Here you could save the preferences to state, localStorage, or send to API
@@ -55,10 +57,19 @@ function App() {
             )
           } 
         />
+        
+        {/* Recommendation/Preferences route */}
         <Route 
           path="/recommendation" 
           element={<Recommendation onContinue={handlePreferencesContinue} />} 
         />
+        
+        {/* Movie detail page route */}
+        <Route 
+          path="/movie/:movieId" 
+          element={<MoviePage />} 
+        />
+        
         {/* Catch all other routes and redirect based on auth status */}
         <Route 
           path="*" 

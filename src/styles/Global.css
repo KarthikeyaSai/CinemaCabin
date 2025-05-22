@@ -19,7 +19,36 @@ html {
 a {
     text-decoration: none;
 }
+/* Add this to your existing Homepage.css or Global.css */
 
+.movie-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.movie-card-link:hover {
+    transform: scale(1.05);
+}
+
+.movie-card-link:hover .movie-card {
+    box-shadow: 0 4px 8px rgba(29, 205, 159, 0.3);
+}
+
+.movie-card {
+    transition: box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.movie-card img {
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.1);
+}
 /* Hide scrollbars globally if desired, or scope to specific components */
 /* For movie-grid, it's handled in Homepage.css */
 /*
