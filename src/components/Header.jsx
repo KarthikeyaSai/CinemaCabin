@@ -14,7 +14,7 @@ const Header = ({ onLogout }) => {
             <Link to="/home"><h1>Cinema Cabin</h1></Link>
             <nav className="nav">
                 <Link to="/home">Home</Link>
-                <Link to="/recommendation">Popular</Link>
+                <Link to="/recommendation">Recommendations</Link>
                 {onLogout && (
                     <button 
                         onClick={handleLogout}
