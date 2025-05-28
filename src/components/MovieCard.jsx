@@ -49,13 +49,13 @@ const MovieCard = ({ imageSrc, altText, title, movieId, rating = 8.5, releaseYea
                     </div>
                 </div>
             </Link>
-            <button 
+            {/* <button 
                 className={`like-button ${isLiked ? 'liked' : ''}`}
                 onClick={handleLike}
                 aria-label={`Like ${title}`}
             >
-                <span className="heart-icon">{isLiked ? '❤️' : '🤍'}</span>
-            </button>
+                <span className="heart-icon">{isLiked ? '🤍' : '🤍'}</span>
+            </button> */}
         </div>
     );
 };
