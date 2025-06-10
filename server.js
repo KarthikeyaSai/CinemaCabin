@@ -8,10 +8,10 @@ app.use(express.json());
 
 // PostgreSQL connection configuration
 const pool = new Pool({
-  user: 'postgres',
-  host: 'postgresql://postgres:Visu%402006@localhost/DBMS_Cinema_Cabin',
-  database: 'DBMS_Cinema_Cabin',
-  password: 'Visu@2006',
+  user: 'YOUR USER ID', //YOUR USER ID
+  host: 'USER HOST NAME', //USER HOSTNAME
+  database: 'DATABASE_NAME', //DATABASE_NAME
+  password: 'PASSWORD', //PASSWORD
   port: 5173,
 });
 
