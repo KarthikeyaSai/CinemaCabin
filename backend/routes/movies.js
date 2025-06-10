@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import { createMovie, getAllMovies, getMovieById, updateMovie, deleteMovie, getTopRatedMovies, getPopularMovies, getFriendsRatingsMovies, likeMovie } from '../controllers/movieController.js';
+const router = Router();
+router.post('/', createMovie);
+router.get('/top-rated', getTopRatedMovies);
+router.get('/popular', getPopularMovies);
+router.get('/friends-ratings', getFriendsRatingsMovies);
+router.get('/', getAllMovies);
+router.get('/:id', getMovieById);
+router.put('/:id', updateMovie);
+router.delete('/:id', deleteMovie);
+router.post('/:id/like', likeMovie);
+export default router;
