@@ -1,7 +1,3 @@
-Here’s a polished and comprehensive `README.md` draft for **Cinema Cabin**, your 4th-semester UI/DB project. Feel free to tweak any section to better align with the actual architecture or include any missing details.
-
----
-
 # 🎬 Cinema Cabin
 
 **Cinema Cabin** is a web application built as part of a 4th-semester User Interface Design and Database Management project. It offers users the ability to browse movie showtimes, select seats, and manage bookings, while featuring an admin interface for managing screenings and theaters.
@@ -28,10 +24,10 @@ Here’s a polished and comprehensive `README.md` draft for **Cinema Cabin**, yo
 
 ## Features
 
-* 📅 **Movie Listings** – View available movies with showtimes.
-* 🎟️ **Interactive Seat Selection** – Choose seats from a visual layout and book them.
-* 👤 **User Bookings** – (Planned) Users can create accounts and view booking history.
-* 🛠️ **Admin Dashboard** – (Planned) Interface for theater staff to set up screens and manage seat availability.
+* 📅 **Movie Listings** – View available
+* 🎟️ **Interactive Movie Page** – A visually stunning interactive page for viewing which movies are available.
+* 👤 **User Interaction** – (Planned) Users can create accounts and rate and review movies.
+* 🛠️ **Movie Dashboard** – (Planned) Interface for viewing descriptions about the movies and rating them.
 
 ---
 
@@ -40,7 +36,7 @@ Here’s a polished and comprehensive `README.md` draft for **Cinema Cabin**, yo
 Cinema Cabin uses a **decoupled front-end/back-end architecture**, where:
 
 * The **front-end** (React + Vite) handles UI and user interactions.
-* The **back-end** (Node.js + Express) exposes RESTful APIs, connects to a database to store theaters, screenings, seat maps, etc.
+* The **back-end** (Node.js + Express) exposes RESTful APIs, connects to a database to store movies, reviews, ratings, user information, etc.
 * Communication is via HTTP between the front-end and back-end.
 
 ---
@@ -49,7 +45,7 @@ Cinema Cabin uses a **decoupled front-end/back-end architecture**, where:
 
 * **Front-end**: Vite-powered React, HTML5, CSS3
 * **Back-end**: Node.js, Express
-* **Database**: *(Specify if MongoDB, MySQL, or any other DB is in use)*
+* **Database**: postGRESQL
 * **Linting & Formatting**: ESLint (config via `eslint.config.js`)
 * **Package Management**: npm (`package.json`, `package-lock.json`)
 
@@ -75,6 +71,8 @@ Cinema Cabin uses a **decoupled front-end/back-end architecture**, where:
    ```bash
    npm install
    cd frontend
+   npm install
+   cd backend
    npm install
    ```
 3. *(If database required)*
@@ -105,9 +103,9 @@ npm run dev
 
 ## Usage
 
-* **Browse** available movies and showtimes
-* **Select seats** from the visual grid
-* **Proceed to book** (backend handles availability and reservation flow)
+* **Browse** available movies and their reviews
+* **Select movies** from the visual grid
+* **Proceed to rate and review** (backend handles the reviews of each verified user)
 * *(Admin flow)*
 
   * Add new screens/theaters
